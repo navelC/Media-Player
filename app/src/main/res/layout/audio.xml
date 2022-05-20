@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/audio_bottom"
+        android:visibility="gone"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageSong"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/mrmsc" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/textViewSong"
+            android:layout_width="146dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="4dp"
+            android:text="dfasdffffffffffffffff"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            app:layout_constraintStart_toEndOf="@+id/cardView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewSinger"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"
+            android:text="TextView"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toEndOf="@+id/cardView2"
+            app:layout_constraintTop_toBottomOf="@+id/textViewSong" />
+
+        <ImageView
+            android:id="@+id/imagePause"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/imagePre"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/outline_pause_circle_outline_white_48" />
+
+        <ImageView
+            android:id="@+id/imageNext"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/imagePause"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/outline_fast_forward_white_48" />
+
+        <ImageView
+            android:id="@+id/imagePre"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="270dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/outline_fast_rewind_white_48" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_weight="10"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:id="@+id/top_nav"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="20dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <ImageView
+                android:id="@+id/profile"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/mrmsc" />
+        </androidx.cardview.widget.CardView>
+        <EditText
+            android:layout_marginLeft="10dp"
+            android:id="@+id/txtSearch"
+            android:drawableLeft="@drawable/ic_action_menu_search"
+            android:textColor="@color/white"
+            android:padding="5dp"
+            android:textColorHint="@color/white"
+            android:background="@drawable/inputs"
+            android:hint="Find music"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_weight="14"
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/bottom_nav"
+        android:layout_below="@+id/top_nav"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
+        tools:context=".MainActivity">
+    </androidx.viewpager.widget.ViewPager>
+
+    <include  layout="@layout/audio"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_weight="2"
+        android:id="@+id/bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_alignParentBottom="true"
+        android:background="#CBBC0443"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:menu="@menu/nav_bottom" />
+
+</LinearLayout>
